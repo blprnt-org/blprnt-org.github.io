@@ -29,3 +29,4 @@
       preview  Local preview of a spec
     ```
 
+If you already have a specification, see [viewing a specification](./specification/viewing_a_specification.md).
