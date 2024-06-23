@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html" class="active">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html" class="active">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -182,24 +182,21 @@
                     <main>
                         <h1 style="font-size: 60px; font-family: 'Averia Serif Libre', serif; font-weight: 700; font-style: italic; color: #209cee">blprnt</h1>
 <blockquote>
-<p>See what your software should do, what it does, and what are the differences.</p>
+<p>Know what software does, what it should do, and what are the differences.</p>
 </blockquote>
 <p><em>blprnt</em> is a tool for creating and verifying software specifications. Each assertion in your specification can be linked to a test and verified automatically.</p>
-<p>The goal of <em>blprnt</em> is to stay out of the way.</p>
-<p>It lets you right your specification however you like. It lets you right your tests however you like. Then <em>blprnt</em> lets you use your tests to verify your specification.</p>
+<p>Specs are written in <a href="specification/markdown_formatting.html">markdown</a>. Tests are written in your testing tool of choice. <em>blprnt</em> puts them together.</p>
 <h3 id="an-example-of-a-verified-specification"><a class="header" href="#an-example-of-a-verified-specification">An Example of a Verified Specification</a></h3>
 <p><img src="gamespecverified.png" alt="A Verified Specification" /></p>
 <h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
 <li>Help teams to think about what to build before building it.</li>
 <li>Maintain an accurate specification of software systems as a basis for ongoing development.</li>
-<li>The tools necessary to keep a specification up-to-date and accurate.</li>
 </ul>
 <h2 id="features"><a class="header" href="#features">Features</a></h2>
 <ul>
-<li>Specification creation and browsing.</li>
-<li>Ability to verify each assertion in a specification using automated tests - to show that the system works as specified and that the specification remains accurate.</li>
-<li>Aggregation of specification components to see which parts of the system are working, broken or not yet implemented.</li>
+<li>Specification <a href="specification/writing_a_specification.html">creation</a> and <a href="specification/viewing_a_specification.html">browsing</a>.</li>
+<li><a href="specification/verifying_a_specification.html">Verification of assertions in specifications</a>.</li>
 </ul>
 
                     </main>

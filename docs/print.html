@@ -96,7 +96,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -183,24 +183,21 @@
                     <main>
                         <h1 style="font-size: 60px; font-family: 'Averia Serif Libre', serif; font-weight: 700; font-style: italic; color: #209cee">blprnt</h1>
 <blockquote>
-<p>See what your software should do, what it does, and what are the differences.</p>
+<p>Know what software does, what it should do, and what are the differences.</p>
 </blockquote>
 <p><em>blprnt</em> is a tool for creating and verifying software specifications. Each assertion in your specification can be linked to a test and verified automatically.</p>
-<p>The goal of <em>blprnt</em> is to stay out of the way.</p>
-<p>It lets you right your specification however you like. It lets you right your tests however you like. Then <em>blprnt</em> lets you use your tests to verify your specification.</p>
+<p>Specs are written in <a href="specification/markdown_formatting.html">markdown</a>. Tests are written in your testing tool of choice. <em>blprnt</em> puts them together.</p>
 <h3 id="an-example-of-a-verified-specification"><a class="header" href="#an-example-of-a-verified-specification">An Example of a Verified Specification</a></h3>
 <p><img src="gamespecverified.png" alt="A Verified Specification" /></p>
 <h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
 <li>Help teams to think about what to build before building it.</li>
 <li>Maintain an accurate specification of software systems as a basis for ongoing development.</li>
-<li>The tools necessary to keep a specification up-to-date and accurate.</li>
 </ul>
 <h2 id="features"><a class="header" href="#features">Features</a></h2>
 <ul>
-<li>Specification creation and browsing.</li>
-<li>Ability to verify each assertion in a specification using automated tests - to show that the system works as specified and that the specification remains accurate.</li>
-<li>Aggregation of specification components to see which parts of the system are working, broken or not yet implemented.</li>
+<li>Specification <a href="specification/writing_a_specification.html">creation</a> and <a href="specification/viewing_a_specification.html">browsing</a>.</li>
+<li><a href="specification/verifying_a_specification.html">Verification of assertions in specifications</a>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <ol>
@@ -233,13 +230,14 @@ Commands:
 </code></pre>
 </li>
 </ol>
+<p>If you already have a specification, see <a href="./specification/viewing_a_specification.html">viewing a specification</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h1>
 <p>The following tutorial uses a demo application to walk through the setup and use of <em>blprnt</em>. Follow the <a href="./installation.html">installation instructions</a> before beginning.</p>
 <ol>
 <li>
 <p><strong>Get the Demo Application</strong></p>
 <p>Clone the example app at <a href="https://github.com/blprnt-org/guess-demo">https://github.com/blprnt-org/guess-demo</a>.</p>
-<pre><code class="language-shell">git clone https://github.com/blprnt-org/guess-demo.git
+<pre><code class="language-shell">$ git clone https://github.com/blprnt-org/guess-demo.git
 </code></pre>
 </li>
 <li>
@@ -256,8 +254,8 @@ Commands:
       featureA.md
       featureB.md
 </code></pre>
-<p>To view the specification for the number guessing game example app:</p>
-<pre><code class="language-shell">blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification"
+<p>To view the specification for the number guessing game example app, change to the <code>guess-demo/GuessingGame/Guessing Game Specification</code> directory and:</p>
+<pre><code class="language-shell">$ blprnt preview
 </code></pre>
 <p><img src="../../gamespec.png" alt="A specification with no statement verification" /></p>
 <p>The specs directory is rendered as a webpage, with the table of contents showing the hierarchy of markdown documents.</p>
@@ -265,8 +263,8 @@ Commands:
 <li>
 <p><strong>Verify the Specification</strong></p>
 <p>The real power of <em>blprnt</em> is that each statement in the specification has been verified by a corresponding automated test (which we ran earlier).</p>
-<p>This time, run <em>blprnt</em> with a path to the specification, and a path to the test results that verify the specification:</p>
-<pre><code class="language-shell">blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification" --tests "guess-demo/GuessingGameTests/testresults"
+<p>This time, run <em>blprnt</em> with a path to the test results that verify the specification:</p>
+<pre><code class="language-shell">blprnt preview --tests "../../GuessingGameTests/testresults"
 </code></pre>
 <p><img src="../../gamespecverified.png" alt="A verified specification" /></p>
 <p>Each assertion in the specification has been checked by automated tests. The green color of the highlight indicates that those statements were successfully verified. The gray color of the last statement indicates that its test is currently skipped. Hover your mouse over a statement for more detail.</p>
@@ -373,18 +371,54 @@ Commands:
 <pre><code class="language-shell">$ blprnt preview --specs "/Users/bill/restaurant-specification"
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="verifying-a-specification"><a class="header" href="#verifying-a-specification">Verifying a Specification</a></h1>
+<p>In a verified specification, each assertion is linked to an automated test that verifies that assertion.</p>
+<p>The automated tests can be created with any testing library, and run with any test runner, so long as the output file is in one of the formats that <em>blprnt</em> understands.</p>
+<p>To verify a specification:</p>
+<ol>
+<li>
+<p><strong>Identify an assertion to verify.</strong></p>
+<p>The <a href="https://github.com/blprnt-org/guess-demo/blob/main/GuessingGame/Guessing%20Game%20Specification/Guessing%20Game%20Specification.md">Guessing Game Demo specification</a> includes the assertion <code>The user must enter a valid, whole number</code>.</p>
+</li>
+<li>
+<p><strong>Write a test that verifies the assertion.</strong></p>
+<p>The <a href="https://github.com/blprnt-org/guess-demo/blob/main/GuessingGameTests/UserInputTests.cs">Guessing Game Demo <code>UserInputTests</code></a> includes a test <code>WholeNumbersInRangeAreValid</code> that verifies the valid, whole number assertion:</p>
+<pre><code class="language-csharp">[Fact]
+public void WholeNumbersInRangeAreValid()
+{
+    foreach (var i in Enumerable.Range(1, 10))
+    {
+        Assert.NotNull(_engine.Parse(i.ToString()));
+    }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Link the specification assertion to it's test.</strong></p>
+<p>There are two types of document selections that can be linked to tests.</p>
+<h5 id="block-containers"><a class="header" href="#block-containers">Block Containers</a></h5>
+<p>Block containers are delimited by <code>:::</code> followed by a new line. For example,</p>
+<pre><code>:::
+Block markdown content
+:::
+</code></pre>
+<h5 id="inline-containers"><a class="header" href="#inline-containers">Inline Containers</a></h5>
+<p>Inline containers are delimited by <code>::</code>, and occur inline.</p>
+<pre><code>This paragraph contains ::an inline container:: as well as some other text.
+</code></pre>
+<p>To link a container, block or inline, to a test add metadata to the closing delimiter. The metadata format is <code>{grep='NameOfTestGoesHere'}</code>. If your test output file includes a test with a name that contains <code>NameOfTestGoesHere</code> then it will be linked to the container.</p>
+<pre><code class="language-markdown">This paragraph ::contains an inline container::{grep='NameOfTestGoesHere'} as well as some other text.
+</code></pre>
+<p>The verified specification:</p>
+<p><img src="specification/../gamespecverified.png" alt="A verified specification" /></p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-automated-tests"><a class="header" href="#creating-automated-tests">Creating Automated Tests</a></h1>
-<p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="test-output-files"><a class="header" href="#test-output-files">Test Output Files</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-tests-with-net"><a class="header" href="#creating-tests-with-net">Creating Tests with .NET</a></h1>
 <p>https://github.com/blprnt-org/guess-demo and add a ms test version.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-tests-with-nodejs"><a class="header" href="#creating-tests-with-nodejs">Creating Tests with node.js</a></h1>
 <p>Do a node version of https://github.com/blprnt-org/guess-demo with examples in mocha and jest.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="other-languages"><a class="header" href="#other-languages">Other Languages</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="verifying-statements-in-a-specification"><a class="header" href="#verifying-statements-in-a-specification">Verifying Statements in a Specification</a></h1>
-<h2 id="inline-verification"><a class="header" href="#inline-verification">Inline Verification</a></h2>
-<h2 id="block-verification"><a class="header" href="#block-verification">Block Verification</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="viewing-a-verified-specification"><a class="header" href="#viewing-a-verified-specification">Viewing a Verified Specification</a></h1>
 
                     </main>
 

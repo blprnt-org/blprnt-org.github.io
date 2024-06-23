@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html" class="active"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html" class="active"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -186,7 +186,7 @@
 <li>
 <p><strong>Get the Demo Application</strong></p>
 <p>Clone the example app at <a href="https://github.com/blprnt-org/guess-demo">https://github.com/blprnt-org/guess-demo</a>.</p>
-<pre><code class="language-shell">git clone https://github.com/blprnt-org/guess-demo.git
+<pre><code class="language-shell">$ git clone https://github.com/blprnt-org/guess-demo.git
 </code></pre>
 </li>
 <li>
@@ -203,8 +203,8 @@
       featureA.md
       featureB.md
 </code></pre>
-<p>To view the specification for the number guessing game example app:</p>
-<pre><code class="language-shell">blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification"
+<p>To view the specification for the number guessing game example app, change to the <code>guess-demo/GuessingGame/Guessing Game Specification</code> directory and:</p>
+<pre><code class="language-shell">$ blprnt preview
 </code></pre>
 <p><img src="../../gamespec.png" alt="A specification with no statement verification" /></p>
 <p>The specs directory is rendered as a webpage, with the table of contents showing the hierarchy of markdown documents.</p>
@@ -212,8 +212,8 @@
 <li>
 <p><strong>Verify the Specification</strong></p>
 <p>The real power of <em>blprnt</em> is that each statement in the specification has been verified by a corresponding automated test (which we ran earlier).</p>
-<p>This time, run <em>blprnt</em> with a path to the specification, and a path to the test results that verify the specification:</p>
-<pre><code class="language-shell">blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification" --tests "guess-demo/GuessingGameTests/testresults"
+<p>This time, run <em>blprnt</em> with a path to the test results that verify the specification:</p>
+<pre><code class="language-shell">blprnt preview --tests "../../GuessingGameTests/testresults"
 </code></pre>
 <p><img src="../../gamespecverified.png" alt="A verified specification" /></p>
 <p>Each assertion in the specification has been checked by automated tests. The green color of the highlight indicates that those statements were successfully verified. The gray color of the last statement indicates that its test is currently skipped. Hover your mouse over a statement for more detail.</p>
