@@ -12,7 +12,7 @@ To verify a specification:
 
 2. **Write a test that verifies the assertion.**
 
-    The [Guessing Game Demo `UserInputTests`](https://github.com/blprnt-org/guess-demo/blob/main/GuessingGameTests/UserInputTests.cs) includes a test `WholeNumbersInRangeAreValid` that verifies the valid, whole number assertion:
+    The [Guessing Game Demo `UserInputTests`](https://github.com/blprnt-org/guess-demo/blob/main/GuessingGameTests/UserInputTests.cs) includes a test `WholeNumbersInRangeAreValid` that verifies the valid, whole number assertion (this is C# and the xUnit testing framework):
 
     ```csharp
     [Fact]
