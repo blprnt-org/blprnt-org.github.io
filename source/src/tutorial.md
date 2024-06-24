@@ -7,7 +7,7 @@ The following tutorial uses a demo application to walk through the setup and use
     Clone the example app at [https://github.com/blprnt-org/guess-demo](https://github.com/blprnt-org/guess-demo).
 
     ```shell
-    git clone https://github.com/blprnt-org/guess-demo.git
+    $ git clone https://github.com/blprnt-org/guess-demo.git
     ```
 
 1. **Launch *blprnt***
@@ -27,10 +27,10 @@ The following tutorial uses a demo application to walk through the setup and use
           featureB.md
     ```
     
-    To view the specification for the number guessing game example app:
+    To view the specification for the number guessing game example app, change to the `guess-demo/GuessingGame/Guessing Game Specification` directory and:
     
     ```shell
-    blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification"
+    $ blprnt preview
     ```
 
     ![A specification with no statement verification](../../gamespec.png)
@@ -41,10 +41,10 @@ The following tutorial uses a demo application to walk through the setup and use
 
     The real power of *blprnt* is that each statement in the specification has been verified by a corresponding automated test (which we ran earlier).
     
-    This time, run *blprnt* with a path to the specification, and a path to the test results that verify the specification:
+    This time, run *blprnt* with a path to the test results that verify the specification:
     
     ```shell
-    blprnt preview --specs "guess-demo/GuessingGame/Guessing Game Specification" --tests "guess-demo/GuessingGameTests/testresults"
+    blprnt preview --tests "../../GuessingGameTests/testresults"
     ```
 
     ![A verified specification](../../gamespecverified.png)

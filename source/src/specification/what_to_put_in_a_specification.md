@@ -5,8 +5,8 @@ How you write and organise your specification is up to you.
 Verifying your specification will be easier if your specification consists of assertions that are:
 
 * clear
-* mutually exclusive
-* collectively exhaustive
+* mutually exclusive (don't repeat yourself)
+* collectively exhaustive (don't miss anything)
 
 Thus, it often makes sense to use lists in a specification.
 

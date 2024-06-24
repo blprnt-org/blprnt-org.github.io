@@ -1,3 +1,1 @@
 # Creating Automated Tests
-
-TODO

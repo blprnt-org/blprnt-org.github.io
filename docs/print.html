@@ -1,26 +1,25 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>blprnt Documentation</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-
-<style>
-    .content main img {
-        filter: drop-shadow(3px 3px 10px #0d3b592b);
-    }
-</style>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <style>
+            .content main img {
+                filter: drop-shadow(3px 3px 10px #0d3b592b);
+            }
+        </style>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
@@ -40,15 +39,16 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -64,50 +64,85 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
+<<<<<<< HEAD
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
+=======
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+>>>>>>> 932c4db699fccb68a66547b845a56de9aff50629
+            </div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -140,7 +175,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -152,28 +187,30 @@
                     <main>
                         <h1 style="font-size: 60px; font-family: 'Averia Serif Libre', serif; font-weight: 700; font-style: italic; color: #209cee">blprnt</h1>
 <blockquote>
-<p>See what your software should do, what it does, and what are the differences.</p>
+<p>Know what software does, what it should do, and what are the differences.</p>
 </blockquote>
 <p><em>blprnt</em> is a tool for creating and verifying software specifications. Each assertion in your specification can be linked to a test and verified automatically.</p>
+<<<<<<< HEAD
 <p>The goal of <em>blprnt</em> is to stay out of the way.</p>
 <p>It lets you right your specification however you like. It lets you right your tests however you like. Then <em>blprnt</em> lets you use your tests to verify your specification.</p>
 <ul>
 <li>Reduce rework</li>
 <li>Improve collaboration</li>
 </ul>
+=======
+<p>Specs are written in <a href="specification/markdown_formatting.html">markdown</a>. Tests are written in your testing tool of choice. <em>blprnt</em> puts them together.</p>
+>>>>>>> 932c4db699fccb68a66547b845a56de9aff50629
 <h3 id="an-example-of-a-verified-specification"><a class="header" href="#an-example-of-a-verified-specification">An Example of a Verified Specification</a></h3>
 <p><img src="gamespecverified.png" alt="A Verified Specification" /></p>
 <h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
 <ul>
 <li>Help teams to think about what to build before building it.</li>
 <li>Maintain an accurate specification of software systems as a basis for ongoing development.</li>
-<li>The tools necessary to keep a specification up-to-date and accurate.</li>
 </ul>
 <h2 id="features"><a class="header" href="#features">Features</a></h2>
 <ul>
-<li>Specification creation and browsing.</li>
-<li>Ability to verify each assertion in a specification using automated tests - to show that the system works as specified and that the specification remains accurate. </li>
-<li>Aggregation of specification components to see which parts of the system are working, broken or not yet implemented. </li>
+<li>Specification <a href="specification/writing_a_specification.html">creation</a> and <a href="specification/viewing_a_specification.html">browsing</a>.</li>
+<li><a href="specification/verifying_a_specification.html">Verification of assertions in specifications</a>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <ol>
@@ -182,13 +219,11 @@
 </li>
 <li>
 <p>Install the <em>blprnt</em> .NET tool.</p>
-</li>
-</ol>
 <pre><code class="language-shell">$ dotnet tool install --global blprnt
 </code></pre>
-<ol start="3">
-<li>Run <code>blprnt</code> and verify that it works.</li>
-</ol>
+</li>
+<li>
+<p>Run <code>blprnt</code> and verify that it works.</p>
 <pre><code class="language-shell">$ blprnt
 
 Required command was not provided.
@@ -206,13 +241,16 @@ Options:
 Commands:
   preview  Local preview of a spec
 </code></pre>
+</li>
+</ol>
+<p>If you already have a specification, see <a href="./specification/viewing_a_specification.html">viewing a specification</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h1>
 <p>The following tutorial uses a demo application to walk through the setup and use of <em>blprnt</em>. Follow the <a href="./installation.html">installation instructions</a> before beginning.</p>
 <ol>
 <li>
 <p><strong>Get the Demo Application</strong></p>
 <p>Clone the example app at <a href="https://github.com/blprnt-org/guess-demo">https://github.com/blprnt-org/guess-demo</a>.</p>
-<pre><code class="language-shell">git clone https://github.com/blprnt-org/guess-demo.git
+<pre><code class="language-shell">$ git clone https://github.com/blprnt-org/guess-demo.git
 </code></pre>
 </li>
 <li>
@@ -229,8 +267,8 @@ Commands:
       featureA.md
       featureB.md
 </code></pre>
-<p>To view the specification for the number guessing game example app:</p>
-<pre><code class="language-shell">blprnt preview --specs &quot;guess-demo/GuessingGame/Guessing Game Specification&quot;
+<p>To view the specification for the number guessing game example app, change to the <code>guess-demo/GuessingGame/Guessing Game Specification</code> directory and:</p>
+<pre><code class="language-shell">$ blprnt preview
 </code></pre>
 <p><img src="../../gamespec.png" alt="A specification with no statement verification" /></p>
 <p>The specs directory is rendered as a webpage, with the table of contents showing the hierarchy of markdown documents.</p>
@@ -238,8 +276,8 @@ Commands:
 <li>
 <p><strong>Verify the Specification</strong></p>
 <p>The real power of <em>blprnt</em> is that each statement in the specification has been verified by a corresponding automated test (which we ran earlier).</p>
-<p>This time, run <em>blprnt</em> with a path to the specification, and a path to the test results that verify the specification:</p>
-<pre><code class="language-shell">blprnt preview --specs &quot;guess-demo/GuessingGame/Guessing Game Specification&quot; --tests &quot;guess-demo/GuessingGameTests/testresults&quot;
+<p>This time, run <em>blprnt</em> with a path to the test results that verify the specification:</p>
+<pre><code class="language-shell">blprnt preview --tests "../../GuessingGameTests/testresults"
 </code></pre>
 <p><img src="../../gamespecverified.png" alt="A verified specification" /></p>
 <p>Each assertion in the specification has been checked by automated tests. The green color of the highlight indicates that those statements were successfully verified. The gray color of the last statement indicates that its test is currently skipped. Hover your mouse over a statement for more detail.</p>
@@ -288,8 +326,13 @@ Commands:
 <p>Verifying your specification will be easier if your specification consists of assertions that are:</p>
 <ul>
 <li>clear</li>
+<<<<<<< HEAD
 <li>mutually exclusive</li>
 <li>collectively exhaustive</li>
+=======
+<li>mutually exclusive (don't repeat yourself)</li>
+<li>collectively exhaustive (don't miss anything)</li>
+>>>>>>> 932c4db699fccb68a66547b845a56de9aff50629
 </ul>
 <p>Thus, it often makes sense to use lists in a specification.</p>
 <p>See <a href="https://github.com/blprnt-org/guess-demo/tree/main/GuessingGame/Guessing%20Game%20Specification">the Guessing Game Demo</a> for a simple working specification.</p>
@@ -320,19 +363,81 @@ Commands:
 </ul>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="viewing-a-specification"><a class="header" href="#viewing-a-specification">Viewing a Specification</a></h1>
+<p>To view a specification</p>
+<ol>
+<li>
+<p>Change to a directory containing:</p>
+<ul>
+<li>a single markdown file OR</li>
+<li>a markdown file with the same name (plus .md) as the directory</li>
+</ul>
+<p>E.g.</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+</code></pre>
+</li>
+<li>
+<p>Launch <em>blprnt</em></p>
+<pre><code class="language-shell">$ blprnt preview
+</code></pre>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:5000</code></p>
+</li>
+</ol>
+<p>The location of the specification directory can alternatively be specified as the command line argument <code>specs</code>:</p>
+<pre><code class="language-shell">$ blprnt preview --specs "/Users/bill/restaurant-specification"
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="verifying-a-specification"><a class="header" href="#verifying-a-specification">Verifying a Specification</a></h1>
+<p>In a verified specification, each assertion is linked to an automated test that verifies that assertion.</p>
+<p>The automated tests can be created with any testing library, and run with any test runner, so long as the output file is in one of the formats that <em>blprnt</em> understands.</p>
+<p>To verify a specification:</p>
+<ol>
+<li>
+<p><strong>Identify an assertion to verify.</strong></p>
+<p>The <a href="https://github.com/blprnt-org/guess-demo/blob/main/GuessingGame/Guessing%20Game%20Specification/Guessing%20Game%20Specification.md">Guessing Game Demo specification</a> includes the assertion <code>The user must enter a valid, whole number</code>.</p>
+</li>
+<li>
+<p><strong>Write a test that verifies the assertion.</strong></p>
+<p>The <a href="https://github.com/blprnt-org/guess-demo/blob/main/GuessingGameTests/UserInputTests.cs">Guessing Game Demo <code>UserInputTests</code></a> includes a test <code>WholeNumbersInRangeAreValid</code> that verifies the valid, whole number assertion:</p>
+<pre><code class="language-csharp">[Fact]
+public void WholeNumbersInRangeAreValid()
+{
+    foreach (var i in Enumerable.Range(1, 10))
+    {
+        Assert.NotNull(_engine.Parse(i.ToString()));
+    }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Link the specification assertion to it's test.</strong></p>
+<p>There are two types of document selections that can be linked to tests.</p>
+<h5 id="block-containers"><a class="header" href="#block-containers">Block Containers</a></h5>
+<p>Block containers are delimited by <code>:::</code> followed by a new line. For example,</p>
+<pre><code>:::
+Block markdown content
+:::
+</code></pre>
+<h5 id="inline-containers"><a class="header" href="#inline-containers">Inline Containers</a></h5>
+<p>Inline containers are delimited by <code>::</code>, and occur inline.</p>
+<pre><code>This paragraph contains ::an inline container:: as well as some other text.
+</code></pre>
+<p>To link a container, block or inline, to a test add metadata to the closing delimiter. The metadata format is <code>{grep='NameOfTestGoesHere'}</code>. If your test output file includes a test with a name that contains <code>NameOfTestGoesHere</code> then it will be linked to the container.</p>
+<pre><code class="language-markdown">This paragraph ::contains an inline container::{grep='NameOfTestGoesHere'} as well as some other text.
+</code></pre>
+<p>The verified specification:</p>
+<p><img src="specification/../gamespecverified.png" alt="A verified specification" /></p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-automated-tests"><a class="header" href="#creating-automated-tests">Creating Automated Tests</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="test-output-files"><a class="header" href="#test-output-files">Test Output Files</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-tests-with-net"><a class="header" href="#creating-tests-with-net">Creating Tests with .NET</a></h1>
-<p>https://github.com/blprnt-org/guess-demo and add a ms test version. </p>
+<p>https://github.com/blprnt-org/guess-demo and add a ms test version.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-tests-with-nodejs"><a class="header" href="#creating-tests-with-nodejs">Creating Tests with node.js</a></h1>
 <p>Do a node version of https://github.com/blprnt-org/guess-demo with examples in mocha and jest.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="other-languages"><a class="header" href="#other-languages">Other Languages</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="verifying-statements-in-a-specification"><a class="header" href="#verifying-statements-in-a-specification">Verifying Statements in a Specification</a></h1>
-<h2 id="inline-verification"><a class="header" href="#inline-verification">Inline Verification</a></h2>
-<h2 id="block-verification"><a class="header" href="#block-verification">Block Verification</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="viewing-a-verified-specification"><a class="header" href="#viewing-a-verified-specification">Viewing a Verified Specification</a></h1>
 
                     </main>
 
@@ -354,26 +459,27 @@ Commands:
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
 
+    </div>
     </body>
 </html>

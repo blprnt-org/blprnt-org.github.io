@@ -13,6 +13,15 @@ Repeat
 
 Nice graphic of circular process
 
+
+Section about adding a specification to an existing application: 
+
+* create a specification directory
+* add a specification markdown file
+* Add a declarative statement about something your system does
+* write a test that verifies that statement
+* add assertion metadata
+
 ### Related Ideas
 
 #### TDD
