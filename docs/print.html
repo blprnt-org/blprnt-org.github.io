@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="workflow.html"><strong aria-hidden="true">3.</strong> Workflow</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">4.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">4.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">4.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">5.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">6.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">7.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">8.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">8.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">8.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">8.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">9.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">10.</strong> Viewing a Verified Specification</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="specification/writing_a_specification.html"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -157,6 +157,10 @@
 <p><em>blprnt</em> is a tool for creating and verifying software specifications. Each assertion in your specification can be linked to a test and verified automatically.</p>
 <p>The goal of <em>blprnt</em> is to stay out of the way.</p>
 <p>It lets you right your specification however you like. It lets you right your tests however you like. Then <em>blprnt</em> lets you use your tests to verify your specification.</p>
+<ul>
+<li>Reduce rework</li>
+<li>Improve collaboration</li>
+</ul>
 <h3 id="an-example-of-a-verified-specification"><a class="header" href="#an-example-of-a-verified-specification">An Example of a Verified Specification</a></h3>
 <p><img src="gamespecverified.png" alt="A Verified Specification" /></p>
 <h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
@@ -242,27 +246,83 @@ Commands:
 <p>Read more at <a href="https://www.withouttheloop.com/articles/2024-06-13-making-living-specifications-work/">Making living specifications work</a></p>
 </li>
 </ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="workflow"><a class="header" href="#workflow">Workflow</a></h1>
-<p>With <em>blprnt</em> you can write your tests, your code and your specification in any order you like, iteratively or not.</p>
-<p>Start blprnt</p>
-<p>Write specification. </p>
-<p>For each assertion in the specification
-Write a test</p>
-<p>Repeat</p>
-<p>Nice graphic of circular process</p>
-<h3 id="related-ideas"><a class="header" href="#related-ideas">Related Ideas</a></h3>
-<h4 id="tdd"><a class="header" href="#tdd">TDD</a></h4>
-<h4 id="bdd-and-specification-by-example"><a class="header" href="#bdd-and-specification-by-example">BDD and Specification by Example</a></h4>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="writing-a-specification"><a class="header" href="#writing-a-specification">Writing a Specification</a></h1>
-<p>Rules about file names</p>
+<p>Each <em>blprnt</em> specification is a directory of <a href="specification/./markdown_formatting.html">markdown</a> files.</p>
+<p>It could be a directory with a single file, or it could be a deeply nested hierarchical structure with hundreds of directories and thousands of markdown files.</p>
+<h2 id="restaurant-example"><a class="header" href="#restaurant-example">Restaurant example</a></h2>
+<p>Imagine you are writing a specification for a restaurant. You start with a directory with a single document representing the specification. The file name should match the name of the directory. This is the title page of your specification:</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+</code></pre>
+<p>You can add other files to a directory and they become sub-sections. Or you can add sub-sections by adding a subdirectory containing a file with the same name as the directory.</p>
+<p>The restaurant will serve food, so you add a directory for food related specification.</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+   /food
+      food.md
+</code></pre>
+<p>The restaurant will serve many cuisines, including burgers, so you add a sub-section for burgers:</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+   /food
+      food.md
+      burgers.md
+</code></pre>
+<p>The rendered specification will have a table of contents like:</p>
+<blockquote>
+<h4 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h4>
+<ul>
+<li><span style="text-decoration:underline">restaurant specification</span>
+<ul>
+<li><span style="text-decoration:underline">food</span>
+<ul>
+<li><span style="text-decoration:underline">burgers</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-to-put-in-a-specification"><a class="header" href="#what-to-put-in-a-specification">What to put in a Specification</a></h1>
+<p>How you write and organise your specification is up to you.</p>
+<p>Verifying your specification will be easier if your specification consists of assertions that are:</p>
+<ul>
+<li>clear</li>
+<li>mutually exclusive</li>
+<li>collectively exhaustive</li>
+</ul>
+<p>Thus, it often makes sense to use lists in a specification.</p>
+<p>See <a href="https://github.com/blprnt-org/guess-demo/tree/main/GuessingGame/Guessing%20Game%20Specification">the Guessing Game Demo</a> for a simple working specification.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="markdown-formatting"><a class="header" href="#markdown-formatting">Markdown Formatting</a></h1>
-<p>What is markdown</p>
-<p>Why markdown</p>
-<p>Link to common mark spec</p>
+<p>Markdown is a way of defining formatted text using plain text. Because it is plain text it is excellent for producing text that can be manipulated by a computer program such as <em>blprnt</em>.</p>
+<p>View the <a href="https://commonmark.org/help/">markdown reference</a> for formatting syntax. Some simple formatting syntax is described below.</p>
+<h2 id="headings"><a class="header" href="#headings">Headings</a></h2>
+<p>To create a heading prefix a line with one or more <code>#</code>. The more <code>#</code>, the smaller the heading.</p>
+<pre><code class="language-markdown"># Big Heading
+## Smaller Heading
+### Smaller Heading
+</code></pre>
+<blockquote>
+<h1 id="big-heading"><a class="header" href="#big-heading">Big Heading</a></h1>
+<h2 id="smaller-heading"><a class="header" href="#smaller-heading">Smaller Heading</a></h2>
+<h3 id="smaller-heading-1"><a class="header" href="#smaller-heading-1">Smaller Heading</a></h3>
+</blockquote>
+<h2 id="lists"><a class="header" href="#lists">Lists</a></h2>
+<pre><code class="language-markdown">* first
+* second
+* third
+</code></pre>
+<blockquote>
+<ul>
+<li>first</li>
+<li>second</li>
+<li>third</li>
+</ul>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="viewing-a-specification"><a class="header" href="#viewing-a-specification">Viewing a Specification</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="verifying-a-specification"><a class="header" href="#verifying-a-specification">Verifying a Specification</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-automated-tests"><a class="header" href="#creating-automated-tests">Creating Automated Tests</a></h1>
+<p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="test-output-files"><a class="header" href="#test-output-files">Test Output Files</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-tests-with-net"><a class="header" href="#creating-tests-with-net">Creating Tests with .NET</a></h1>
 <p>https://github.com/blprnt-org/guess-demo and add a ms test version. </p>

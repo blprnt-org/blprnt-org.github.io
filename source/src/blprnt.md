@@ -8,6 +8,9 @@ The goal of *blprnt* is to stay out of the way.
 
 It lets you right your specification however you like. It lets you right your tests however you like. Then *blprnt* lets you use your tests to verify your specification.
 
+* Reduce rework
+* Improve collaboration
+
 ### An Example of a Verified Specification
 
 ![A Verified Specification](gamespecverified.png)

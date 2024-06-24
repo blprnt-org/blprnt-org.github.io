@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="../installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="../workflow.html"><strong aria-hidden="true">3.</strong> Workflow</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="../specification/writing_a_specification.html" class="active"><strong aria-hidden="true">4.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">4.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="../specification/markdown_formatting.html"><strong aria-hidden="true">4.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="../specification/viewing_a_specification.html"><strong aria-hidden="true">5.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="../specification/verifying_a_specification.html"><strong aria-hidden="true">6.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="../tests/creating_automated_tests.html"><strong aria-hidden="true">7.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="../tests/test_output_files.html"><strong aria-hidden="true">8.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">8.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="../tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">8.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="../tests/other_languages.html"><strong aria-hidden="true">8.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="../verification/verifying_statements.html"><strong aria-hidden="true">9.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="../verification/viewing_a_verified_specification.html"><strong aria-hidden="true">10.</strong> Viewing a Verified Specification</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../blprnt.html">blprnt</a></li><li class="chapter-item expanded "><a href="../installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../tutorial.html"><strong aria-hidden="true">2.</strong> Tutorial</a></li><li class="chapter-item expanded affix "><li class="part-title">Specification</li><li class="chapter-item expanded "><a href="../specification/writing_a_specification.html" class="active"><strong aria-hidden="true">3.</strong> Writing a Specification</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specification/what_to_put_in_a_specification.html"><strong aria-hidden="true">3.1.</strong> What to put in a Specification</a></li><li class="chapter-item expanded "><a href="../specification/markdown_formatting.html"><strong aria-hidden="true">3.2.</strong> Markdown Formatting</a></li></ol></li><li class="chapter-item expanded "><a href="../specification/viewing_a_specification.html"><strong aria-hidden="true">4.</strong> Viewing a Specification</a></li><li class="chapter-item expanded "><a href="../specification/verifying_a_specification.html"><strong aria-hidden="true">5.</strong> Verifying a Specification</a></li><li class="chapter-item expanded affix "><li class="part-title">Automated Tests</li><li class="chapter-item expanded "><a href="../tests/creating_automated_tests.html"><strong aria-hidden="true">6.</strong> Creating Automated Tests</a></li><li class="chapter-item expanded "><a href="../tests/test_output_files.html"><strong aria-hidden="true">7.</strong> Test Output Files</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tests/creating_tests_with_dotnet.html"><strong aria-hidden="true">7.1.</strong> Creating Tests with .NET</a></li><li class="chapter-item expanded "><a href="../tests/creating_tests_with_nodejs.html"><strong aria-hidden="true">7.2.</strong> Creating Tests with node.js</a></li><li class="chapter-item expanded "><a href="../tests/other_languages.html"><strong aria-hidden="true">7.3.</strong> Other Languages</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Verification</li><li class="chapter-item expanded "><a href="../verification/verifying_statements.html"><strong aria-hidden="true">8.</strong> Verifying Statements in a Specification</a></li><li class="chapter-item expanded "><a href="../verification/viewing_a_verified_specification.html"><strong aria-hidden="true">9.</strong> Viewing a Verified Specification</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,13 +150,48 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="writing-a-specification"><a class="header" href="#writing-a-specification">Writing a Specification</a></h1>
-<p>Rules about file names</p>
+<p>Each <em>blprnt</em> specification is a directory of <a href="./markdown_formatting.html">markdown</a> files.</p>
+<p>It could be a directory with a single file, or it could be a deeply nested hierarchical structure with hundreds of directories and thousands of markdown files.</p>
+<h2 id="restaurant-example"><a class="header" href="#restaurant-example">Restaurant example</a></h2>
+<p>Imagine you are writing a specification for a restaurant. You start with a directory with a single document representing the specification. The file name should match the name of the directory. This is the title page of your specification:</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+</code></pre>
+<p>You can add other files to a directory and they become sub-sections. Or you can add sub-sections by adding a subdirectory containing a file with the same name as the directory.</p>
+<p>The restaurant will serve food, so you add a directory for food related specification.</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+   /food
+      food.md
+</code></pre>
+<p>The restaurant will serve many cuisines, including burgers, so you add a sub-section for burgers:</p>
+<pre><code>/restaurant-specification
+   restaurant-specification.md
+   /food
+      food.md
+      burgers.md
+</code></pre>
+<p>The rendered specification will have a table of contents like:</p>
+<blockquote>
+<h4 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h4>
+<ul>
+<li><span style="text-decoration:underline">restaurant specification</span>
+<ul>
+<li><span style="text-decoration:underline">food</span>
+<ul>
+<li><span style="text-decoration:underline">burgers</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -170,7 +205,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
